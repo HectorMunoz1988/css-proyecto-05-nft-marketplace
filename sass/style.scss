@@ -1,0 +1,315 @@
+:root {
+  background-color: #F1FEFE;
+} 
+
+body {
+  max-width: 1600px; // 200px | 10em | 5rem | 75%; 
+  margin: 0px auto;
+  padding: 0px 1rem; // para que no se pegue el contenido al hacer mas pequeña la ventana 
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  position: relative;
+  
+  &::before {
+    content: ""; // → | ✓ | ✔ | ★ | • | › | » | ✕  | ✦ | ⚠️ | 🔥 | ⭐ | 📌 | ❗ | 🔒 | 🔓 | 🔔 | 🛠️ | 📝 | 📎 | 📊 | Texto 
+    display: block; // block | inline | inline-block | flex | grid | none | inline-flex | inline-grid | table | etc 
+    width: 44%; // 200px | 10em | 5rem | 75% 
+    height: 100%;
+    background-color: #2E2F38;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -2;
+
+  }
+
+  header {
+    padding: 36px 0px;
+
+    .title {
+      display: flex;
+      justify-content: space-between; // flex-start(por defecto) | flex-end | center | space-between | space-around | space-evenly 
+      align-items: baseline; // stretch(por defecto) | flex-start | flex-end | center | baseline 
+
+      nav {
+        margin-left: 153px;
+      }
+
+      aside {
+        margin-left: auto;
+        margin-right: 8%;
+      }
+
+      ul {
+        display: flex;
+        gap: 56px;
+        list-style: none; // elimina el marcador "•" de la lista 
+        
+        a {
+          text-decoration: none; // elimina el subrayado 
+          font-weight: 400; // 200, 300, normal(400), 500, 600, bold(700), 800, 900 
+          font-size: 18px;
+          color: black;
+        }
+
+        .link {
+          color: white;
+          font-weight: 600; // 200, 300, normal(400), 500, 600, bold(700), 800, 900 
+        }
+        .btn {
+          padding: 11px 39px;
+          background-color: #FA504D;
+          color: white;
+          font-weight: 600; // 200, 300, normal(400), 500, 600, bold(700), 800, 900 
+        }
+        
+      }
+    }
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 56% 44%; // 200px 1fr 2fr auto 30% 
+    
+    //gap: 28px;
+
+    .hero {
+      margin-left: 0px;
+      margin-top: 80px;
+      margin-right: 0px;
+      margin-bottom: 0px;
+
+      .hero__header{
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 0px;
+          left: 140px;
+        }
+
+        h1{
+          margin: 0px;
+          font-weight: 400; // 200, 300, normal(400), 500, 600, bold(700), 800, 900 
+          font-family: 'Belgrano', serif;
+          font-size: 72px;
+        }
+
+        p {
+          font-weight: 400; // 200, 300, normal(400), 500, 600, bold(700), 800, 900 
+          font-family: 'Poppins', sans-serif;
+          font-size: 24px;
+          color: grey;
+        }
+
+        &::before {
+          content: ""; // → | ✓ | ✔ | ★ | • | › | » | ✕  | ✦ | ⚠️ | 🔥 | ⭐ | 📌 | ❗ | 🔒 | 🔓 | 🔔 | 🛠️ | 📝 | 📎 | 📊 | Texto 
+          display: block; // block | inline | inline-block | flex | grid | none | inline-flex | inline-grid | table | etc 
+          width: 83px; // 200px | 10em | 5rem | 75% 
+          height: 3px;
+          background-color: #FA504D;
+          position: absolute;
+          top: 324px;
+          left: 0px;
+
+        }
+      }
+
+      aside {
+        display: flex;
+        align-items: baseline; // stretch(por defecto) | flex-start | flex-end | center | baseline 
+        gap: 32px;
+
+        .link {
+          color: black;
+          font-weight: 600; // 200, 300, normal(400), 500, 600, bold(700), 800, 900 
+          font-size: 18px;
+
+          span {
+            position: relative;
+            top: 16px;
+            left: 6px;
+          }
+        }
+        .btn {
+          padding: 16px 90px;
+          background-color: #FA504D;
+          color: white;
+          font-weight: 600; // 200, 300, normal(400), 500, 600, bold(700), 800, 900 
+          text-decoration: none; // elimina el subrayado 
+          font-size: 18px;
+        }
+      }
+    }
+
+    .articles {
+      h2 {
+        font-weight: 400; // 200, 300, normal(400), 500, 600, bold(700), 800, 900 
+        font-family: 'Belgrano', serif;
+        font-size: 32px;
+      }
+      .articles{
+        display: flex;
+        gap: 32px;
+
+        article{
+          border: 1px solid grey;
+          img {
+            max-width: 392px;
+            margin: 8px;
+          }
+        }
+      }      
+    }
+
+    .panel {
+      grid-column: 2 / 3;
+      grid-row: 1 / 3;
+
+      img {
+        width: 574px;
+        height: 580px;
+        z-index: -1;
+        position: relative;
+        top: 0px;
+        left: 46px;
+      }
+
+      figcaption {
+        display: none;
+      }
+
+      .info {
+        margin: -56px 110px 0px 72px;
+        background-color: #F1FEFE;
+        width: 608px;
+        height: 235px;
+        z-index: 1;
+
+        .data {
+          display: flex;
+          justify-content: space-between; // flex-start(por defecto) | flex-end | center | space-between | space-around | space-evenly 
+          align-items: center; // stretch(por defecto) | flex-start | flex-end | center | baseline 
+
+          .left {
+            margin: 32px;
+            display: flex;
+            align-items: center; // stretch(por defecto) | flex-start | flex-end | center | baseline 
+            width: 226px;
+
+            img {
+              width: 63px;
+              height: 64px;
+              left: 0px;
+              z-index: 2;
+            }
+
+            .in {
+              display: flex;
+              flex-direction: column; // row(por defecto) | row-reverse | column | column-reverse 
+              gap: 12px;
+              width: 147px;
+              height: 67px;
+
+              p:nth-of-type(1) {
+                margin: 0px;
+                color: grey;
+                font-size: 18px;
+              }
+              p:nth-of-type(2) {
+                margin: 0px;
+                font-weight: 600; // 200, 300, normal(400), 500, 600, bold(700), 800, 900 
+                font-size: 24px;
+                color: black;
+              }
+            }
+          }  
+          .right {
+            margin: 32px;
+            display: flex;
+            flex-direction: column; // row(por defecto) | row-reverse | column | column-reverse 
+            gap: 12px;
+            width: 101px;
+            height: 67px;
+
+            p:nth-of-type(1) {
+              margin: 0px;
+              color: grey;
+              font-size: 18px;
+            }
+            p:nth-of-type(2) {
+              margin: 0px;
+              font-weight: 600; // 200, 300, normal(400), 500, 600, bold(700), 800, 900 
+              font-size: 24px;
+              color: black;
+            }
+          }
+        }
+        .down {
+          margin:32px;
+          position: relative;
+
+          .btn {
+            padding: 11px 86px;
+            background-color: #FA504D;
+            color: white;
+            font-weight: 600; // 200, 300, normal(400), 500, 600, bold(700), 800, 900 
+            text-decoration: none; // elimina el subrayado 
+            font-size: 18px;
+          }
+          
+          .link {
+            padding: 11px 86px;
+            background-color: #F1FEFE;
+            color: #FA504D;
+            font-weight: 600; // 200, 300, normal(400), 500, 600, bold(700), 800, 900 
+            text-decoration: none; // elimina el subrayado 
+            font-size: 18px;
+          }
+
+          &::before {
+            content: ""; // → | ✓ | ✔ | ★ | • | › | » | ✕  | ✦ | ⚠️ | 🔥 | ⭐ | 📌 | ❗ | 🔒 | 🔓 | 🔔 | 🛠️ | 📝 | 📎 | 📊 | Texto 
+            display: block; // block | inline | inline-block | flex | grid | none | inline-flex | inline-grid | table | etc 
+            width: 544px; // 200px | 10em | 5rem | 75% 
+            height: 1px;
+            background-color: black;
+            position: absolute;
+            top: -40px;
+            left: 0px;
+
+          }
+
+
+        }
+      }
+
+      .last{
+        margin: 40px 110px 57px 72px;
+        display: flex;
+        justify-content: space-between; // flex-start(por defecto) | flex-end | center | space-between | space-around | space-evenly 
+        align-items: center; // stretch(por defecto) | flex-start | flex-end | center | baseline 
+        width: 594px; // 200px | 10em | 5rem | 75% 
+        height: 48px;
+
+        p {
+          display: flex;
+          align-items: center; // 👈 centra span y texto 
+          gap: 6px;
+          margin: 0px;
+          text-decoration: none; // elimina el subrayado 
+          font-weight: 400; // 200, 300, normal(400), 500, 600, bold(700), 800, 900 
+          font-size: 18px;
+          color: #F1FEFE;
+
+          span {
+            text-decoration: none; // elimina el subrayado 
+            font-weight: 600; // 200, 300, normal(400), 500, 600, bold(700), 800, 900 
+            font-size: 32px;
+            color: #FA504D;
+          }
+        }
+
+      }
+    }
+  }
+}
